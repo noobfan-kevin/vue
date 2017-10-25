@@ -8,6 +8,11 @@ import 'element-ui/lib/theme-default/index.css'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+//register your own tag element for project
+import hxm from './components/hxm/hxm.vue';
+Vue.component('hxm',hxm);
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

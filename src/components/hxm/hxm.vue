@@ -56,5 +56,5 @@ export default {
 }
 </script>
 <style>
-    @import '../../public/stylesheets/hxm.scss'
+    @import '../../../public/stylesheets/hxm.scss'
 </style>

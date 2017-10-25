@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Bar from '@/components/Bar'
 import Post from '@/components/Post'
-import hxm from '@/components/hxm'
+import hxm from '@/components/hxm/hxm.vue'
 
 Vue.use(Router)
 
