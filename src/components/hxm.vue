@@ -52,9 +52,6 @@ export default {
   },
   destroyed: function(){
       console.log('distoryed');
-  },
-  inputOnChange: function(e){
-      console.log(e);
   }
 }
 </script>
