@@ -48,3 +48,6 @@ export default {
   }
 }
 </script>
+<style>
+    @import '../../public/stylesheets/hxm.scss'
+</style>

@@ -20,10 +20,17 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
+  const sassLoader = {
+    loader: 'sass-loader',
+    options: {
+      minimize: process.env.NODE_ENV === 'production',
+      sourceMap: options.sourceMap
+    }
+  }
 
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = [cssLoader]
+    const loaders = [cssLoader, sassLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
