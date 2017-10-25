@@ -1,6 +1,7 @@
 <template>
-  <div class="hxm-container" v-if="show">
+  <div class="hxm-container">
       <ul>
+          <h2>{{title}}</h2>
           <li v-for="item in items" :key="item.name">
               <h3>{{item.name}}</h3>
               <br>
@@ -9,7 +10,16 @@
               <span>his age is {{item.age}}</span>
           </li>
       </ul>
-      <input type="checkbox" :aria-checked="show" @change="val => show = val"></input>
+      <input type="checkbox" @change="$event => show = $event.target.checked"></input>
+      <br>
+      <div v-if="show">
+        <span>where is my tag</span>
+      </div>
+      <div v-else>
+          <span>here is may tag</span>
+          <br>
+          <span>TAG......</span>
+      </div>
   </div>
 </template>
 
@@ -20,10 +30,7 @@ export default {
     return {
         items: [
             {name: 'huangxiaomeng1', hasPhone: true, age: '12'},
-            {name: 'huangxiaomeng2', hasPhone: false, age: '15'},
-            {name: 'huangxiaomeng3', hasPhone: true, age: '28'},
-            {name: 'huangxiaomeng4', hasPhone: false, age: '18'},
-            {name: 'huangxiaomeng5', hasPhone: true, age: '38'}
+            {name: 'huangxiaomeng2', hasPhone: false, age: '15'}
         ],
         title: 'personInfo',
         show: true
@@ -34,7 +41,7 @@ export default {
   },
   watch: {
       show: function() {
-          alert('changed');
+          console.log(this.show);
       }
   },
   created: function(){
@@ -45,6 +52,9 @@ export default {
   },
   destroyed: function(){
       console.log('distoryed');
+  },
+  inputOnChange: function(e){
+      console.log(e);
   }
 }
 </script>
