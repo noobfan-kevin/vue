@@ -33,7 +33,7 @@ export default {
             {name: 'huangxiaomeng2', hasPhone: false, age: '15'}
         ],
         title: 'personInfo',
-        show: true
+        show: false
     }
   },
   beforeCreate:function(){
